@@ -2,6 +2,7 @@ const listaSpesa = [ "cipolla" , "latte", "carne", "nutella",];
 
 const miaLista = document.querySelector('.miaLista');
 
+
 // console.log(miaLista)
 
 // for ( let i = 0; i < listaSpesa.length; i++ ) {
@@ -17,16 +18,33 @@ const miaLista = document.querySelector('.miaLista');
 
 // }
 
-let i = 0
-while ( i < listaSpesa.length ) {
+const myButton = document.getElementById("btn");
 
-    let elementi = listaSpesa[i];
+myButton.addEventListener('click', function() {
+    let aggiungi = prompt('inserisci quello che devi aggiungere');
 
-    let liElement = document.createElement("li");
-    liElement.innerHTML = elementi;
+    // per far in modo che quello che si ha scritto nel prompt venga aggiunto all'array
+    listaSpesa.push(aggiungi);
+    miaLista.innerHTML += `
+    <li>
+    <input type="checkbox" name="" id="">
+    <span> ${aggiungi} </span>
+    </li>
+    `
+    console
+})
 
-    miaLista.append(liElement);
 
-    i++;
 
+let i = 0;
+while (  i < listaSpesa.length ) {
+
+    miaLista.innerHTML += `
+    <li>
+    <input type="checkbox" name="" id="">
+    <span> ${listaSpesa[i]} </span>
+    </li>
+    `
+
+     i++ 
 }
