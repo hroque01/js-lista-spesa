@@ -5,6 +5,9 @@ const miaLista = document.querySelector('.miaLista');
 
 // console.log(miaLista)
 
+
+// **************PRIMA VERSIONE*******************
+
 // for ( let i = 0; i < listaSpesa.length; i++ ) {
 
 //     let elementi = listaSpesa[i];
@@ -18,6 +21,24 @@ const miaLista = document.querySelector('.miaLista');
 
 // }
 
+// **************SECONDA VERSIONE*******************
+// let i
+// while ( let i = 0; i < listaSpesa.length; i++ ) {
+
+//     let elementi = listaSpesa[i];
+
+//     // creo l'elemento li
+//     let liElement = document.createElement("li");
+//     liElement.innerHTML = elementi;
+
+//     //aggiungiamo i li all'ul
+//     miaLista.append(liElement);
+
+//     i++
+
+// }
+
+// ****************CON INNER HTML*************************
 const myButton = document.getElementById("btn");
 
 myButton.addEventListener('click', function() {
